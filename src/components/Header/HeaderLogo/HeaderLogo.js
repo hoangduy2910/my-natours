@@ -5,18 +5,18 @@ import headerLogoImage from "../../../assets/images/logo-white.png";
 
 const HeaderLogoStyled = styled.div`
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 
   img {
-    height: 35px;
+    height: 3.5rem;
   }
 `;
 
 const HeaderLogo = (props) => {
   return (
     <HeaderLogoStyled className="header__logo-box">
-      <img src={headerLogoImage} alt="Logo" />
+      <img className="header__logo" src={headerLogoImage} alt="Logo" />
     </HeaderLogoStyled>
   );
 };

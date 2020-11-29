@@ -18,7 +18,7 @@ const HeaderStyled = styled.header`
   background-position: top;
   position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 `;
 
 const Header = (props) => {

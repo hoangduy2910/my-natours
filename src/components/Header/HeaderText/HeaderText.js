@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import * as colors from "../../../colors";
+
 import HeaderButton from "../HeaderButton/HeaderButton";
 
 const HeaderTextStyled = styled.div`
@@ -10,17 +12,17 @@ const HeaderTextStyled = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
 
-  .header__heading-primary {
-    color: #fff;
+  .heading-primary {
+    color: ${colors.white};
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     &--main {
       display: block;
-      font-size: 60px;
+      font-size: 6rem;
       font-weight: 400;
-      letter-spacing: 35px;
+      letter-spacing: 3.5rem;
 
       animation-name: moveInLeft;
       animation-duration: 1s;
@@ -29,9 +31,9 @@ const HeaderTextStyled = styled.div`
 
     &--sub {
       display: block;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: 17.5px;
+      letter-spacing: 1.75rem;
 
       /* animation-name: moveInRight;
       animation-duration: 1s;
@@ -44,11 +46,11 @@ const HeaderTextStyled = styled.div`
   @keyframes moveInLeft {
     0% {
       opacity: 0;
-      transform: translateX(-100px);
+      transform: translateX(-10rem);
     }
 
     80% {
-      transform: translateX(20px);
+      transform: translateX(1rem);
     }
 
     100% {
@@ -60,11 +62,11 @@ const HeaderTextStyled = styled.div`
   @keyframes moveInRight {
     0% {
       opacity: 0;
-      transform: translateX(100px);
+      transform: translateX(10rem);
     }
 
     80% {
-      transform: translateX(-20px);
+      transform: translateX(-1rem);
     }
 
     100% {
@@ -77,9 +79,9 @@ const HeaderTextStyled = styled.div`
 const HeaderText = (props) => {
   return (
     <HeaderTextStyled className="header__text-box">
-      <h1 className="header__heading-primary">
-        <span className="header__heading-primary--main">Outdoors</span>
-        <span className="header__heading-primary--sub">
+      <h1 className="heading-primary">
+        <span className="heading-primary--main">Outdoors</span>
+        <span className="heading-primary--sub">
           is where life happens
         </span>
       </h1>

@@ -1,15 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
+import * as colors from "../../../colors";
+
 const HeaderButtonStyled = styled.a`
+  font-size: 1.6rem;
   display: inline-block;
-  background-color: #fff;
-  color: #777;
+  background-color: ${colors.white};
+  color: ${colors.greyDark};
 
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
-  border-radius: 100px;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
 
   transition: all .2s;
   position: relative;
@@ -19,12 +22,12 @@ const HeaderButtonStyled = styled.a`
   &:hover {
     cursor: pointer;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
   }
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2); 
   }
 
   &::after {
@@ -32,11 +35,11 @@ const HeaderButtonStyled = styled.a`
     display: inline-block;
     height: 100%;
     width: 100%;
-    background-color: #fff;
-    border-radius: 100px;
+    background-color: ${colors.white};
+    border-radius: 10rem;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1;
     transition: all .2s;
   }
@@ -49,7 +52,7 @@ const HeaderButtonStyled = styled.a`
   @keyframes moveInBottom {
     0% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(3rem);
     }
 
     100% {
@@ -60,7 +63,7 @@ const HeaderButtonStyled = styled.a`
 `;
 
 const HeaderButton = (props) => {
-  return <HeaderButtonStyled>Discover our tours</HeaderButtonStyled>;
+  return <HeaderButtonStyled className="btn--white">Discover our tours</HeaderButtonStyled>;
 };
 
 export default HeaderButton;
